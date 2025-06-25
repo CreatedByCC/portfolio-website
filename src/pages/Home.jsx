@@ -2,7 +2,6 @@ import Hero from '../components/Hero'
 import Skills from '../components/Skills'
 import FeaturedProjects from '../components/FeaturedProjects'
 import About from '../components/About'
-import Footer from '../components/Footer.jsx'
 
 function Home() {
   return (
@@ -15,7 +14,6 @@ function Home() {
             <Skills />
         </div>
         <FeaturedProjects />
-        <Footer />
     </>
   )
 }

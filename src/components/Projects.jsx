@@ -1,37 +1,41 @@
-import projects from '../data/projects'
+import { useState } from 'react';
+import ProjectSearch from './ProjectSearch';
+import allProjects from '../data/projects';
+import ProjectCard from './ProjectCard';
 
 function Projects() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const filteredProjects = allProjects.filter(
+    (project) =>
+      project.type === 'learning' &&
+      project.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <section id="projects" className="bg-white py-16 px-4 text-gray-800">
-      <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-bold mb-2">Cooked Up While Learning</h2>
+        <p className="text-slate-500 text-base italic max-w-xl mx-auto">
+          A dash of curiosity, a pinch of code—served fresh from tutorials, challenges, and late-night ah-ha moments.
+        </p>
+      </div>
+
+      <ProjectSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-        {projects.map((project, index) => (
-          <a
+        {filteredProjects.map((project, index) => (
+          <ProjectCard
             key={index}
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-gray-50"
-          >
-            <h3 className="text-2xl font-semibold mb-2 text-teal-600">{project.title}</h3>
-            <p className="text-gray-600">{project.description}</p>
-            {project.tech && (
-            <div className="flex flex-wrap mt-4 gap-2">
-                {project.tech.map((tag, tagIndex) => (
-                <span
-                    key={tagIndex}
-                    className="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded-full font-medium"
-                >
-                    {tag}
-                </span>
-                ))}
-            </div>
-            )}
-          </a>
+            title={project.title}
+            description={project.description}
+            tech={project.tech}
+            link={project.link}
+          />
         ))}
       </div>
     </section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
