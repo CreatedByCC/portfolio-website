@@ -1,10 +1,12 @@
 import allProjects from '../data/projects';
 import ProjectCard from './ProjectCard';
 
-function OwnBuilds() {
+function OwnBuilds({ searchTerm }) {
   const personalProjects = allProjects.filter(
-    (project) => project.type === 'personal'
-  );
+  (project) =>
+    project.type === 'personal' &&
+    project.title.toLowerCase().includes(searchTerm.toLowerCase())
+);
 
   return (
     <section id="own-builds" className="bg-white py-20 px-4 text-center">

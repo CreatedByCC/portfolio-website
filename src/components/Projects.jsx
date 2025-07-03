@@ -3,9 +3,7 @@ import ProjectSearch from './ProjectSearch';
 import allProjects from '../data/projects';
 import ProjectCard from './ProjectCard';
 
-function Projects() {
-  const [searchTerm, setSearchTerm] = useState('');
-
+function Projects({ searchTerm }) {
   const filteredProjects = allProjects.filter(
     (project) =>
       project.type === 'learning' &&
@@ -20,8 +18,6 @@ function Projects() {
           A dash of curiosity, a pinch of code—served fresh from tutorials, challenges, and late-night ah-ha moments.
         </p>
       </div>
-
-      <ProjectSearch searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {filteredProjects.map((project, index) => (
