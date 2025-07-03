@@ -9,9 +9,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "add:nojekyll": "mkdir -p dist && echo > dist/.nojekyll",
+    "scripts": {
+    "add:nojekyll": "echo > dist/.nojekyll",
     "predeploy": "npm run build && npm run add:nojekyll",
     "deploy": "gh-pages -d dist"
+}
   },
   "dependencies": {
     "react": "^19.1.0",
