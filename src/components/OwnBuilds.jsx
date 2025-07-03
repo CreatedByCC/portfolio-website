@@ -33,6 +33,7 @@ function OwnBuilds({ searchTerm }) {
               tech={project.tech}
               link={project.link}
               demo={project.demo}
+              image={project.image}
             />
           ))
         )}

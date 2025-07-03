@@ -1,47 +1,54 @@
-function ProjectCard({ title, description, tech, link, demo }) {
+function ProjectCard({ title, description, tech, link, demo, image }) {
+  const fallbackImage = "/project-images/no-preview.jpg"; // Update path and extension if needed
+
   return (
-    <div className="block h-full p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-gray-50 text-left">
-      <h3 className="text-2xl font-semibold mb-2 text-teal-600">{title}</h3>
+    <div className="relative group rounded-lg overflow-hidden shadow-lg border border-gray-200 h-80">
+      <img
+        src={image || fallbackImage}
+        alt={`${title} preview`}
+        className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-300"
+      />
 
-      {tech && (
-        <div className="flex flex-wrap mb-4 gap-2">
-          {tech.map((tag, index) => (
-            <span
-              key={index}
-              className="text-xs bg-teal-100 text-teal-800 px-2 py-1 rounded-full font-medium"
+      {/* Overlay Content */}
+      <div className="absolute inset-0 bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center px-6 text-center">
+        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        <p className="text-sm mb-4">{description}</p>
+
+        {tech?.length > 0 && (
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
+            {tech.map((tag, index) => (
+              <span
+                key={index}
+                className="text-xs bg-teal-600 text-white px-2 py-1 rounded-full font-medium"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <div className="flex gap-4">
+          {demo && (
+            <a
+              href={demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-3 py-1 bg-green-500 rounded hover:bg-green-600 transition-colors"
             >
-              {tag}
-            </span>
-          ))}
+              <i className="fas fa-eye" /> View
+            </a>
+          )}
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 px-3 py-1 bg-blue-500 rounded hover:bg-blue-600 transition-colors"
+            >
+              <i className="fab fa-github" /> Code
+            </a>
+          )}
         </div>
-      )}
-
-      <p className="text-gray-600 mb-4">{description}</p>
-
-      <div className="mt-4 space-x-4">
-        {/* GitHub Link */}
-        {link && (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:underline font-medium"
-          >
-            📂 View on GitHub →
-          </a>
-        )}
-
-        {/* Live Demo Link – only if demo exists */}
-        {demo && (
-          <a
-            href={demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-600 hover:underline font-medium"
-          >
-            🚀 Live Demo →
-          </a>
-        )}
       </div>
     </div>
   );

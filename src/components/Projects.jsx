@@ -33,6 +33,7 @@ function Projects({ searchTerm }) {
               tech={project.tech}
               link={project.link}
               demo={project.demo}
+              image={project.image}
             />
           ))
         )}
