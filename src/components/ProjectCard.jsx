@@ -6,7 +6,9 @@ function ProjectCard({ title, description, tech, link, demo, image }) {
       <img
         src={image || fallbackImage}
         alt={`${title} preview`}
-        className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-300"
+        className={`w-full h-full object-cover ${
+          image ? 'object-top' : 'object-center'
+        } transform group-hover:scale-105 transition-transform duration-300`}
       />
 
       {/* Overlay Content */}
