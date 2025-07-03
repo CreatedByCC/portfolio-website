@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "add:nojekyll": "mkdir -p dist && echo > dist/.nojekyll",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && npm run add:nojekyll",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
