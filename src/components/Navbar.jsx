@@ -3,9 +3,11 @@ import { Link, useLocation } from 'react-router-dom'
 function Navbar() {
   const location = useLocation()
 
+  const currentPath = location.hash.replace('#', '') || '/'
+
   const linkClass = (path) =>
     `px-4 py-2 rounded-md transition ${
-      location.pathname === path
+      currentPath === path
         ? 'bg-teal-500 text-white'
         : 'text-teal-600 hover:bg-teal-100'
     }`
