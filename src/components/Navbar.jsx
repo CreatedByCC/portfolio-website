@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 function Navbar() {
   const location = useLocation()
 
-  const currentPath = location.hash.replace('#', '') || '/'
+  const currentPath = location.hash.split('?')[0].replace(/^#/, '') || '/'
 
   const linkClass = (path) =>
     `px-4 py-2 rounded-md transition ${

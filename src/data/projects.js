@@ -5,7 +5,7 @@ const projects = [
     link: "https://github.com/chantel/portfolio",
     tech: ["React", "Tailwind", "Vite"],
     type: "personal",
-    image: "/project-images/my-developer-portfolio.jpg"
+    image: "./project-images/my-developer-portfolio.jpg"
   },
   {
     title: "Sticky Note App",
@@ -14,7 +14,7 @@ const projects = [
     demo: "https://createdbycc.github.io/sticky-note-app/",
     tech: ["React", "JavaScript", "CSS", "HTML"],
     type: "learning",
-    image: "/project-images/sticky-note-app.jpg"
+    image: "./project-images/sticky-note-app.jpg"
   },
   {
     title: "Name Tag Generator",
@@ -23,7 +23,7 @@ const projects = [
     demo: "https://createdbycc.github.io/name-tag-generator/",
     tech: ["React", "JavaScript", "CSS", "HTML"],
     type: "learning",
-    image: "/project-images/name-tag-generator.jpg"
+    image: "./project-images/name-tag-generator.jpg"
   },
   {
     title: "Name Tag Generator with Hooks",
@@ -31,7 +31,7 @@ const projects = [
     link: "https://github.com/CreatedByCC/name-tag-generator-hooks",
     tech: ["React", "JavaScript", "CSS", "HTML"],
     type: "learning",
-    image: "/project-images/name-tag-generator.jpg"
+    image: "./project-images/name-tag-generator.jpg"
   },
   {
     title: "Hotel Booking App",
@@ -40,7 +40,7 @@ const projects = [
     demo: "https://createdbycc.github.io/hotel-booking-app",
     tech: ["React", "JavaScript", "CSS", "HTML"],
     type: "learning",
-    image: "/project-images/hotel-booking-app.jpg"
+    image: "./project-images/hotel-booking-app.jpg"
   },
   {
     title: "File Metadata Microservice",
@@ -91,7 +91,7 @@ const projects = [
     demo: "https://createdbycc.github.io/zestful-investing/",
     tech: ["HTML", "CSS", "Flexbox"],
     type: "learning",
-    image: "/project-images/zestful-investing.jpg"
+    image: "./project-images/zestful-investing.jpg"
   },
   {
     title: "Meal Generator",
@@ -107,7 +107,7 @@ const projects = [
     demo: "https://createdbycc.github.io/tea-cozy/",
     tech: ["HTML", "CSS"],
     type: "learning",
-    image: "/project-images/tea-cozy.jpg"
+    image: "./project-images/tea-cozy.jpg"
   },
   {
     title: "HTML & CSS Cheat Sheet",
@@ -116,7 +116,7 @@ const projects = [
     demo: "https://createdbycc.github.io/html-css-cheat-sheet/",
     tech: ["HTML", "CSS"],
     type: "learning",
-    image: "/project-images/html-css-cheat-sheet.jpg"
+    image: "./project-images/html-css-cheat-sheet.jpg"
   },
   {
     title: "JavaScript Calculator",
@@ -125,7 +125,7 @@ const projects = [
     demo: "https://createdbycc.github.io/js-calculator-freecodecamp/",
     tech: ["React", "JavaScript", "CSS", "HTML"],
     type: "learning",
-    image: "/project-images/js-calculator.jpg"
+    image: "./project-images/js-calculator.jpg"
   },
   {
     title: "Drum Machine",
@@ -134,7 +134,7 @@ const projects = [
     demo: "https://createdbycc.github.io/drum-machine-freecodecamp/",
     tech: ["React", "JavaScript", "CSS", "HTML", "Vite"],
     type: "learning",
-    image: "/project-images/drum-machine.jpg"
+    image: "./project-images/drum-machine.jpg"
   },
   {
     title: "Random Quote Machine",
@@ -143,7 +143,7 @@ const projects = [
     demo: "https://createdbycc.github.io/random-quote-machine-freecodecamp/",
     tech: ["React", "JavaScript", "CSS", "HTML", "Vite"],
     type: "learning",
-    image: "/project-images/random-quote-machine.jpg"
+    image: "./project-images/random-quote-machine.jpg"
   },
   {
     title: "Markdown Previewer",
@@ -152,7 +152,7 @@ const projects = [
     demo: "https://createdbycc.github.io/markdown-previewer-freecodecamp/",
     tech: ["React", "JavaScript", "CSS", "HTML", "Vite"],
     type: "learning",
-    image: "/project-images/markdown-previewer.jpg"
+    image: "./project-images/markdown-previewer.jpg"
   },
   {
     title: "Tree Map Diagram",
@@ -161,7 +161,7 @@ const projects = [
     demo: "https://createdbycc.github.io/tree-map-freecodecamp/",
     tech: ["JavaScript", "D3.js", "HTML", "CSS"],
     type: "learning",
-    image: "/project-images/tree-map-diagram.jpg"
+    image: "./project-images/tree-map-diagram.jpg"
   },
   {
     title: "Choropleth Map Visualization",
@@ -170,7 +170,7 @@ const projects = [
     demo: "https://createdbycc.github.io/choropleth-freecodecamp/",
     tech: ["JavaScript", "D3.js", "HTML", "CSS", "JSON"],
     type: "learning",
-    image: "/project-images/chloropleth-map.jpg"
+    image: "./project-images/chloropleth-map.jpg"
   },
   {
     title: "Scatterplot Graph",
@@ -179,7 +179,7 @@ const projects = [
     demo: "https://createdbycc.github.io/scatterplot-freecodecamp/",
     tech: ["JavaScript", "D3.js", "HTML", "CSS"],
     type: "learning",
-    image: "/project-images/scatterplot-graph.jpg"
+    image: "./project-images/scatterplot-graph.jpg"
   },
   {
     title: "Bar Chart Visualization",
@@ -188,7 +188,7 @@ const projects = [
     demo: "https://createdbycc.github.io/bar-chart-freecodecamp/",
     tech: ["JavaScript", "D3.js", "HTML", "CSS"],
     type: "learning",
-    image: "/project-images/bar-chart.jpg"
+    image: "./project-images/bar-chart.jpg"
   },
   {
     title: "Heat Map Visualization",
@@ -197,7 +197,7 @@ const projects = [
     demo: "https://createdbycc.github.io/heat-map-freecodecamp/",
     tech: ["JavaScript", "D3.js", "HTML", "CSS"],
     type: "learning",
-    image: "/project-images/heat-map.jpg"
+    image: "./project-images/heat-map.jpg"
   },
   {
     title: "Survey Form",
@@ -206,7 +206,7 @@ const projects = [
     demo: "https://createdbycc.github.io/survey-form-freecodecamp/",
     tech: ["HTML", "CSS"],
     type: "learning",
-    image: "/project-images/survey-form.jpg"
+    image: "./project-images/survey-form.jpg"
   },
   {
     title: "Roman Numeral Converter",
@@ -250,7 +250,7 @@ const projects = [
     demo: "https://createdbycc.github.io/github-repo-gallery/",
     tech: ["JavaScript", "HTML", "CSS", "GitHub API"],
     type: "learning",
-    image: "/project-images/github-repo-gallery.jpg"
+    image: "./project-images/github-repo-gallery.jpg"
   },
   {
     title: "Guess the Word",
@@ -259,7 +259,7 @@ const projects = [
     demo: "https://createdbycc.github.io/guess-the-word/",
     tech: ["JavaScript", "HTML", "CSS"],
     type: "learning",
-    image: "/project-images/guess-the-word.jpg"
+    image: "./project-images/guess-the-word.jpg"
   },
   {
     title: "Image Generator",
@@ -268,7 +268,7 @@ const projects = [
     demo: "https://createdbycc.github.io/image-generator/",
     tech: ["JavaScript", "HTML", "CSS"],
     type: "learning",
-    image: "/project-images/image-generator.jpg"
+    image: "./project-images/image-generator.jpg"
   },
   {
     title: "Subscription Calculator",
@@ -277,7 +277,7 @@ const projects = [
     demo: "https://createdbycc.github.io/sub-calculator/",
     tech: ["JavaScript", "HTML", "CSS"],
     type: "learning",
-    image: "/project-images/subscription-calculator.jpg"
+    image: "./project-images/subscription-calculator.jpg"
   },
 ];
 

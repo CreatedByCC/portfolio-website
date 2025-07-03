@@ -1,5 +1,5 @@
 function ProjectCard({ title, description, tech, link, demo, image }) {
-  const fallbackImage = "/project-images/no-preview.jpg"; // Update path and extension if needed
+  const fallbackImage = "./project-images/no-preview.jpg"; // Update path and extension if needed
 
   return (
     <div className="relative group rounded-lg overflow-hidden shadow-lg border border-gray-200 h-80">

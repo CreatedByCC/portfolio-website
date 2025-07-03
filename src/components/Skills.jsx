@@ -16,7 +16,7 @@ function Skills() {
             <div className="group flex flex-col items-center">
               <div className="bg-white border border-gray-300 rounded-full p-4 shadow-md transition-transform group-hover:scale-110">
                 <img
-                  src={`/icons/${techIcons[tag]}`}
+                  src={`./icons/${techIcons[tag]}`}
                   alt={tag}
                   className="h-10 w-10"
                 />
