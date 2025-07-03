@@ -1,12 +1,40 @@
-# React + Vite
+# CreatedByCC Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive, brain-powered React portfolio built by [Chantel Couper](https://github.com/CreatedByCC). Developed with Vite and TailwindCSS, this site showcases featured projects, modular design, and a creative journey from educator to software engineer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Site
 
-## Expanding the ESLint configuration
+[🌐 View the Portfolio](https://createdbycc.github.io/portfolio-website)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧰 Tech Stack
+
+- **Frontend:** React, React Router DOM
+- **Styling:** TailwindCSS, PostCSS, Autoprefixer
+- **Build Tool:** Vite
+- **Version Control:** Git & GitHub
+
+---
+
+## 🧩 Features
+
+- Dynamic Featured Projects section with responsive layout
+- Reusable `ProjectCard` component with hover overlays and tech tags
+- Fallback image logic for missing previews
+- Deploy-ready with GitHub Pages integration
+- Clean code with modular structure and custom hooks
+
+---
+
+## 📦 Setup Instructions
+
+Clone the repo and run locally:
+
+```bash
+git clone https://github.com/CreatedByCC/portfolio-website.git
+cd portfolio-website
+npm install
+npm run dev
