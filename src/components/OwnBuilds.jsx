@@ -5,8 +5,10 @@ function OwnBuilds({ searchTerm }) {
   const personalProjects = allProjects.filter(
   (project) =>
     project.type === 'personal' &&
-    project.title.toLowerCase().includes(searchTerm.toLowerCase())
-);
+    (project.title + project.tech.join(' '))
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase())
+  );
 
   return (
     <section id="own-builds" className="bg-white py-20 px-4 text-center">
@@ -18,15 +20,22 @@ function OwnBuilds({ searchTerm }) {
       </div>
 
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-        {personalProjects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            tech={project.tech}
-            link={project.link}
-          />
-        ))}
+        {personalProjects.length === 0 ? (
+          <p className="text-slate-500 text-center col-span-full italic">
+            😕 No personal builds match "<strong>{searchTerm}</strong>". Try another keyword!
+          </p>
+        ) : (
+          personalProjects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              tech={project.tech}
+              link={project.link}
+              demo={project.demo}
+            />
+          ))
+        )}
       </div>
     </section>
   );

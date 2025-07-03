@@ -1,4 +1,4 @@
-function ProjectCard({ title, description, tech, link }) {
+function ProjectCard({ title, description, tech, link, demo }) {
   return (
     <div className="block h-full p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-gray-50 text-left">
       <h3 className="text-2xl font-semibold mb-2 text-teal-600">{title}</h3>
@@ -18,16 +18,31 @@ function ProjectCard({ title, description, tech, link }) {
 
       <p className="text-gray-600 mb-4">{description}</p>
 
-      {link && (
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-600 hover:underline"
-        >
-          View on GitHub →
-        </a>
-      )}
+      <div className="mt-4 space-x-4">
+        {/* GitHub Link */}
+        {link && (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline font-medium"
+          >
+            📂 View on GitHub →
+          </a>
+        )}
+
+        {/* Live Demo Link – only if demo exists */}
+        {demo && (
+          <a
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-green-600 hover:underline font-medium"
+          >
+            🚀 Live Demo →
+          </a>
+        )}
+      </div>
     </div>
   );
 }

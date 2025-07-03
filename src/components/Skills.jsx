@@ -4,7 +4,7 @@ import techIcons from '../data/techIcons'
 
 function Skills() {
   const allTags = projects.flatMap(p => p.tech || [])
-  const exclude = ['API', 'LocalStorage']
+  const exclude = ['API', 'LocalStorage', 'Flexbox', 'GitHub API', 'Multer']
   const uniqueTags = [...new Set(allTags)].filter(tag => !exclude.includes(tag)).sort()
 
   return (
