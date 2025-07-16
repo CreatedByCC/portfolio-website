@@ -2,7 +2,7 @@ const projects = [
   {
     title: "My Developer Portfolio",
     description: "Built from scratch with React and Tailwind, this site reflects my journey from science teacher to fullstack developer. It showcases my learning progress, favorite tools, and ever-expanding skills.",
-    link: "https://github.com/chantel/portfolio",
+    link: "https://github.com/CreatedByCC/portfolio-website",
     tech: ["React", "Tailwind", "Vite"],
     type: "personal",
     image: "project-images/my-developer-portfolio.jpg"
